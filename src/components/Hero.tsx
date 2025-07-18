@@ -65,10 +65,29 @@ export const Hero = () => {
             transition={{ delay: 1, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-6 justify-center"
           >
-            <button className="btn-gaming">
+            <button 
+              className="btn-gaming"
+              onClick={() => {
+                const projectsSection = document.getElementById('projects');
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               View My Work
             </button>
-            <button className="btn-gaming-outline">
+            <button 
+              className="btn-gaming-outline"
+              onClick={() => {
+                // Create a dummy CV PDF download
+                const link = document.createElement('a');
+                link.href = 'data:application/pdf;base64,JVBERi0xLjMNCiXi48/TDQoxIDAgb2JqDQo8PA0KL1R5cGUgL0NhdGFsb2cNCi9QYWdlcyAyIDAgUg0KPj4NCmVuZG9iag0KMiAwIG9iag0KPDwNCi9UeXBlIC9QYWdlcw0KL0NvdW50IDENCi9LaWRzIFsgMyAwIFIgXQ0KPj4NCmVuZG9iag0KMyAwIG9iag0KPDwNCi9UeXBlIC9QYWdlDQovUGFyZW50IDIgMCBSDQovTWVkaWFCb3ggWyAwIDAgNjEyIDc5MiBdDQovUmVzb3VyY2VzIDw8DQovRm9udCA8PA0KL0YxIDQgMCBSDQo+Pg0KPj4NCi9Db250ZW50cyA1IDAgUg0KPj4NCmVuZG9iag0KNCAwIG9iag0KPDwNCi9UeXBlIC9Gb250DQovU3VidHlwZSAvVHlwZTENCi9CYXNlRm9udCAvSGVsdmV0aWNhDQo+Pg0KZW5kb2JqDQo1IDAgb2JqDQo8PA0KL0xlbmd0aCA0NA0KPj4NCnN0cmVhbQ0KQlQNCi9GMSAxMiBUZg0KNzIgNzIwIFRkDQooSm9obiBEb2UgLSBDVikgVGoNCkVUDQplbmRzdHJlYW0NCmVuZG9iag0KeHJlZg0KMCA2DQowMDAwMDAwMDAwIDY1NTM1IGYgDQowMDAwMDAwMDA5IDAwMDAwIG4gDQowMDAwMDAwMDU4IDAwMDAwIG4gDQowMDAwMDAwMTE1IDAwMDAwIG4gDQowMDAwMDAwMjQ1IDAwMDAwIG4gDQowMDAwMDAwMzIzIDAwMDAwIG4gDQp0cmFpbGVyDQo8PA0KL1NpemUgNg0KL1Jvb3QgMSAwIFINCj4+DQpzdGFydHhyZWYNCjQxNg0KJSVFT0YNCg==';
+                link.download = 'John_Doe_CV.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               Download CV
             </button>
           </motion.div>
