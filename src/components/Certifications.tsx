@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Award } from 'lucide-react';
-import azureCertifications from '@/assets/azure-certifications.jpg';
-import googleCertifications from '@/assets/google-certifications.jpg';
+import microsoftLogo from '@/assets/microsoft-logo.png';
+import googleLogo from '@/assets/google-logo.png';
 
 const certificationData = [
   {
     provider: 'Microsoft Azure',
-    image: azureCertifications,
+    image: microsoftLogo,
     certifications: [
       { name: 'Azure Data Scientist Associate (DP-100)', link: 'https://learn.microsoft.com/en-us/certifications/azure-data-scientist/' },
       { name: 'Azure AI Engineer Associate (AI-102)', link: 'https://learn.microsoft.com/en-us/certifications/azure-ai-engineer/' },
@@ -18,7 +18,7 @@ const certificationData = [
   },
   {
     provider: 'Google',
-    image: googleCertifications,
+    image: googleLogo,
     certifications: [
       { name: 'Google Data Analytics Professional Certificate', link: 'https://www.coursera.org/professional-certificates/google-data-analytics' },
       { name: 'Google Business Intelligence Certificate', link: 'https://www.coursera.org/professional-certificates/google-business-intelligence' },

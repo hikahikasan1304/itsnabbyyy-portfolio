@@ -11,8 +11,8 @@ const projectsData = [
     description: 'A comprehensive dashboard built with React and D3.js that visualizes real-time business metrics. Features interactive charts, data filtering, and responsive design for optimal user experience across devices.',
     image: project1Image,
     technologies: ['React', 'D3.js', 'Node.js', 'PostgreSQL', 'AWS'],
-    githubLink: 'https://github.com',
-    liveLink: 'https://demo-project.com',
+    githubLink: 'https://github.com/yourusername/analytics-dashboard',
+    liveLink: 'https://analytics-dashboard-demo.vercel.app',
     category: 'Web Development'
   },
   {
@@ -21,8 +21,8 @@ const projectsData = [
     description: 'Machine learning pipeline using Python and TensorFlow to predict customer behavior patterns. Implements advanced neural networks with 94% accuracy for business intelligence and decision making.',
     image: project2Image,
     technologies: ['Python', 'TensorFlow', 'Pandas', 'Azure ML', 'Docker'],
-    githubLink: 'https://github.com',
-    liveLink: 'https://demo-project.com',
+    githubLink: 'https://github.com/yourusername/ai-predictive-model',
+    liveLink: 'https://ai-model-demo.herokuapp.com',
     category: 'Machine Learning'
   },
   {
@@ -31,8 +31,8 @@ const projectsData = [
     description: 'Scalable ETL pipeline on Azure Cloud Platform that processes millions of records daily. Automated data ingestion, transformation, and visualization using modern cloud-native technologies.',
     image: project3Image,
     technologies: ['Azure', 'Power BI', 'Python', 'SQL', 'Apache Spark'],
-    githubLink: 'https://github.com',
-    liveLink: 'https://demo-project.com',
+    githubLink: 'https://github.com/yourusername/cloud-data-pipeline',
+    liveLink: 'https://data-pipeline-dashboard.azurewebsites.net',
     category: 'Data Engineering'
   }
 ];

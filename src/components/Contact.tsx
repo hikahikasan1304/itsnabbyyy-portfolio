@@ -14,11 +14,25 @@ export const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(`Hi,
+
+${formData.message}
+
+Best regards,
+${formData.name}
+${formData.email}`);
+    
+    const mailtoLink = `mailto:john.doe@example.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      title: "Email Client Opened!",
+      description: "Your default email client should open with the message.",
     });
+    
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
