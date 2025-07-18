@@ -150,8 +150,11 @@
   /* Gaming button styles */
   .btn-gaming {
     @apply relative px-8 py-3 rounded-lg font-semibold tracking-wide transition-all duration-300;
-    @apply bg-gradient-to-r from-primary to-secondary text-white;
-    @apply hover:scale-105 hover:shadow-[var(--shadow-neon)] hover:text-white active:scale-95;
+    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground;
+    @apply hover:scale-105 hover:shadow-[var(--shadow-neon)] active:scale-95;
+    @apply before:absolute before:inset-0 before:rounded-lg before:p-[2px];
+    @apply before:bg-gradient-to-r before:from-primary before:to-secondary before:-z-10;
+    @apply after:absolute after:inset-[2px] after:rounded-lg after:bg-background after:-z-10;
   }
 
   .btn-gaming-outline {
