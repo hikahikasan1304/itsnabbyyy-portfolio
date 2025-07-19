@@ -162,6 +162,7 @@ ${formData.email}`);
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     viewport={{ once: true }}
+                    style={{ pointerEvents: 'auto' }}
                   >
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Full Name *
@@ -173,8 +174,9 @@ ${formData.email}`);
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-input border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                      className="w-full px-4 py-3 rounded-lg bg-input border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors relative z-10"
                       placeholder="Your full name"
+                      style={{ pointerEvents: 'auto' }}
                     />
                   </motion.div>
 
@@ -183,6 +185,7 @@ ${formData.email}`);
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     viewport={{ once: true }}
+                    style={{ pointerEvents: 'auto' }}
                   >
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
                       Email Address *
@@ -194,8 +197,9 @@ ${formData.email}`);
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-input border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                      className="w-full px-4 py-3 rounded-lg bg-input border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors relative z-10"
                       placeholder="your.email@example.com"
+                      style={{ pointerEvents: 'auto' }}
                     />
                   </motion.div>
                 </div>
@@ -205,6 +209,7 @@ ${formData.email}`);
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                   viewport={{ once: true }}
+                  style={{ pointerEvents: 'auto' }}
                 >
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">
                     Subject *
@@ -216,8 +221,9 @@ ${formData.email}`);
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-input border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-input border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors relative z-10"
                     placeholder="What's this about?"
+                    style={{ pointerEvents: 'auto' }}
                   />
                 </motion.div>
 
@@ -226,6 +232,7 @@ ${formData.email}`);
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                   viewport={{ once: true }}
+                  style={{ pointerEvents: 'auto' }}
                 >
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Message *
@@ -237,8 +244,9 @@ ${formData.email}`);
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 rounded-lg bg-input border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-lg bg-input border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors resize-none relative z-10"
                     placeholder="Tell me about your project or inquiry..."
+                    style={{ pointerEvents: 'auto' }}
                   />
                 </motion.div>
 
@@ -247,10 +255,12 @@ ${formData.email}`);
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.7 }}
                   viewport={{ once: true }}
+                  style={{ pointerEvents: 'auto' }}
                 >
                   <button
                     type="submit"
-                    className="w-full md:w-auto btn-gaming flex items-center justify-center gap-3"
+                    className="w-full md:w-auto btn-gaming flex items-center justify-center gap-3 relative z-10"
+                    style={{ pointerEvents: 'auto' }}
                   >
                     <Send className="w-5 h-5" />
                     Send Message

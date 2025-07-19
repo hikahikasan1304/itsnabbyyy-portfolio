@@ -139,7 +139,8 @@ export const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors flex-1 justify-center"
+                    className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors flex-1 justify-center relative z-10"
+                    style={{ pointerEvents: 'auto' }}
                   >
                     <ExternalLink className="w-4 h-4" />
                     View Project
@@ -148,7 +149,8 @@ export const Projects = () => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg border border-border hover:border-primary hover:text-primary transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg border border-border hover:border-primary hover:text-primary transition-colors relative z-10"
+                    style={{ pointerEvents: 'auto' }}
                   >
                     <Github className="w-4 h-4" />
                     GitHub
