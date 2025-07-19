@@ -71,27 +71,29 @@ export const Certifications = () => {
 
               <div className="space-y-4">
                 {provider.certifications.map((cert, certIndex) => (
-                  <motion.a
+                  <motion.div
                     key={cert.name}
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: (providerIndex * 0.2) + (certIndex * 0.1) }}
                     viewport={{ once: true }}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex items-center justify-between p-4 rounded-lg bg-muted/50 border border-border hover:border-primary transition-all duration-300 group"
                   >
-                    <div className="flex items-center gap-3">
-                      <Award className="w-5 h-5 text-primary" />
-                      <span className="font-medium text-foreground group-hover:text-primary transition-colors">
-                        {cert.name}
-                      </span>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                  </motion.a>
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between p-4 rounded-lg bg-muted/50 border border-border hover:border-primary transition-all duration-300 group block cursor-pointer"
+                      style={{ pointerEvents: 'auto' }}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Award className="w-5 h-5 text-primary" />
+                        <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+                          {cert.name}
+                        </span>
+                      </div>
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </a>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
