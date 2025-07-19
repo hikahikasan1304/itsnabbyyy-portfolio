@@ -79,7 +79,7 @@ export const Portfolio = () => {
       
       {/* Scroll Progress Indicator */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent z-50 origin-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent z-30 origin-left pointer-events-none"
         style={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.3 }}
