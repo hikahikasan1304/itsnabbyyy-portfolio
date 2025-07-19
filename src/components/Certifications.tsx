@@ -71,29 +71,26 @@ export const Certifications = () => {
 
               <div className="space-y-4">
                 {provider.certifications.map((cert, certIndex) => (
-                  <motion.div
+                  <div
                     key={cert.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: (providerIndex * 0.2) + (certIndex * 0.1) }}
-                    viewport={{ once: true }}
+                    className="animate-fade-in"
+                    style={{ animationDelay: `${(providerIndex * 0.2) + (certIndex * 0.1)}s` }}
                   >
                     <a
                       href={cert.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between p-4 rounded-lg bg-muted/50 border border-border hover:border-primary transition-all duration-300 group block cursor-pointer"
-                      style={{ pointerEvents: 'auto' }}
+                      className="flex items-center justify-between p-4 rounded-lg bg-muted/50 border border-border hover:border-primary transition-all duration-300 group block w-full"
                     >
                       <div className="flex items-center gap-3">
-                        <Award className="w-5 h-5 text-primary" />
+                        <Award className="w-5 h-5 text-primary flex-shrink-0" />
                         <span className="font-medium text-foreground group-hover:text-primary transition-colors">
                           {cert.name}
                         </span>
                       </div>
-                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                      <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                     </a>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </motion.div>
