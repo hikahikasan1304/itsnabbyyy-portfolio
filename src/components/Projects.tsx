@@ -169,9 +169,15 @@ export const Projects = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <button className="btn-gaming">
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gaming inline-block"
+            style={{ pointerEvents: 'auto' }}
+          >
             View All Projects
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
